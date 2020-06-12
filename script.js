@@ -21,4 +21,4 @@ console.log('произведение чисел: ', composition);
 
 console.log('Возведение в степень 3: ', composition ** 3);
 
-console.log('Вывод перввых двух цифр: ', (composition ** 3).toString().substr(0, 2));
+alert('Вывод первых двух цифр: ' + (composition ** 3).toString().substr(0, 2));
