@@ -1,24 +1,41 @@
 "use strict";
-let num = 266219;
-
-
-function calculate(numArray) {
-    let i, sum = 1;
-    for (i = 0; i < numArray.length; i++) {
-        sum *= numArray[i];
-    }
-    return sum;
+let lang = ['ru', 'en'],
+    rus = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб','вс'],
+    eng = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat','sun'],
+    mes =  confirm('Дни недели вывезди на русском (ок) или английском (отмена)?');
+console.log('--------Первое задание-------');
+if (mes === true) {
+    console.log('if: ', String(rus)); 
+} else {
+    console.log('if: ', String(eng)); 
 }
 
-function calc(num) {
-    let numArr = num.toString().split('').map(Number);
-    return calculate(numArr);
+switch (mes) {
+    case true: 
+        console.log('switch: ', String(rus)); 
+        break;
+    case false:
+        console.log('switch: ', String(eng)); 
+        break;
+    default: alert('Что-то пошло не так');
 }
 
-let composition = calc(num);
+let matr = [
+    ['mon', 'tue', 'wed', 'thu', 'fri', 'sat','sun'],
+    ['пн', 'вт', 'ср', 'чт', 'пт', 'сб','вс']    
+];
 
-console.log('произведение чисел: ', composition);
+console.log('Многомерный массив: ', String(matr[(Number(mes))]));
 
-console.log('Возведение в степень 3: ', composition ** 3);
+console.log('--------Второе задание-------');
 
-alert('Вывод первых двух цифр: ' + (composition ** 3).toString().substr(0, 2));
+let namePerson = prompt('Введите имя: ');
+
+let message = (namePerson === 'Артем') ? 'директор' :
+                (namePerson === 'Максим') ? 'преподаватель':
+                'студент';
+let ending = (namePerson === 'Артем' || namePerson === 'Максим') ? 'а: ' : ':';
+
+let post = (ending === 'а: ') ? 'Должность ' : 'Должность';
+
+console.log(post + namePerson + ending, message);
