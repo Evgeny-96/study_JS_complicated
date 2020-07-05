@@ -11,6 +11,6 @@ let textColor3 = document.querySelector('.text-color-3'),
         result = Math.floor(rendColor).toString(16);
         textColor3.textContent = '#' + result;
         body.style.backgroundColor = '#' + result;
-        console.log('body.style.backgroundColor: ', body.style.backgroundColor);
+        console.log('body.style.backgroundColor: ', body.style);
     }
     textButton.addEventListener('click', rend);
